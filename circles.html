@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Circles</title>
     <script type="text/javascript" src="paper-full.js"></script>
+    <link rel="stylesheet" href="circles.css">
     <!-- Define inlined PaperScript associate it with myCanvas -->
     <script type="text/paperscript" canvas="myCanvas">
       // Create a Paper.js Path to draw a line into it:
@@ -18,8 +19,8 @@
       // PaperScript does that for us, and much more!
       path.lineTo(start + [ 100, -50 ]);
 
-      var myCircle = new Path.Circle(new Point(100, 70), 50);
-      myCircle.fillColor = 'black';
+      var myCircle = new Path.Circle(new Point(100, 70), 300);
+      myCircle.fillColor = 'pink';
     </script>
   </head>
   <body>
