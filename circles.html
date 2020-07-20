@@ -5,29 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Circles</title>
     <script type="text/javascript" src="paper-full.js"></script>
-    <link rel="stylesheet" href="circles.css">
+    <link rel="stylesheet" href="circles.css" />
     <!-- Define inlined PaperScript associate it with myCanvas -->
 
     <!-- <script type="text/javascript" canvas="myCanvas"> -->
-    <script type="text/paperscript" canvas="myCanvas">
+      <script type="text/paperscript" canvas="myCanvas">
 
-     // Create a Paper.js Path to draw a line into it:
-      // var path = new Path();
-      // // Give the stroke a color
-      // path.strokeColor = 'red';
-      // var start = new Point(100, 100);
-      // // Move to start and draw a line from there
-      // path.moveTo(start);
-      // // Note the plus operator on Point objects.
-      // // PaperScript does that for us, and much more!
-      // path.lineTo(start + [ 100, -50 ]); 
+      function onKeyDown(event) {
+        // When a key is pressed, set the content of the text item:
+        var maxPoint = new Point(view.size.width, view.size.height);
+        var randomPoint = Point.random();
+        var point = maxPoint * randomPoint;
 
-       for (var i = 0; i < 1000; i+=100) {
-         for (var j = 0; j < 1000; j+=100) {
-            new Path.Circle(new Point(i,j), 10).fillColor = 'pink';
-         }
-       }
-      
+        new Path.Circle(point, 10).fillColor = "pink";
+      }
     </script>
   </head>
   <body>
