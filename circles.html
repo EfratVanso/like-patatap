@@ -13,9 +13,16 @@
     <!-- <script type="text/javascript" canvas="myCanvas"> -->
         <script type="text/paperscript" canvas="myCanvas">
 
+         var sound = new Howl({
+          src: ['sounds/bubbles.mp3']
+        });
+         
+        //sound.play();
+
         var circles = [];
 
       function onKeyDown(event) {
+        sound.play();
         // When a key is pressed, set the content of the text item:
         var maxPoint = new Point(view.size.width, view.size.height);
         var randomPoint = Point.random();
