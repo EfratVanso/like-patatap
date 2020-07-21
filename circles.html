@@ -175,8 +175,9 @@
         var circles = [];
 
       function onKeyDown(event) {
-
+        document.getElementById('p').innerHTML = "key pressed: " + event.key;
         console.log(circles.length);
+
         
           // When a key is pressed, set the content of the text item:
           var maxPoint = new Point(view.size.width, view.size.height);
@@ -185,12 +186,13 @@
 
           var newCircle = new Path.Circle(point, 500);
           circles.push(newCircle);
+
           if(keyData[event.key]){
-          newCircle.fillColor = keyData[event.key].color;
-          keyData[event.key].sound.play();
-        }else{
-          newCircle.fillColor = keyData['a'].color;
-          keyData['a'].sound.play();
+            newCircle.fillColor = keyData[event.key].color;
+            keyData[event.key].sound.play();
+         }else{ //default
+            newCircle.fillColor = keyData['a'].color;
+            keyData['a'].sound.play();
         }
           
         
@@ -210,18 +212,10 @@
         }
       }
     </script>
-    <script type="text/javascript">
-      var canvas = document.getElementById("myCanvas");
-      var ctx=canvas.getContext("2d");
-      ctx.font="30px Comic Sans MS";
-      ctx.fillStyle = "red";
-      ctx.textAlign = "center";
-      ctx.fillText("Hello World", canvas.width/2, canvas.height/2);
-      </script>
+ 
   </head>
   <body>
-    <!-- <h2 style="color: aqua;">lllklk</h2> -->
-
+    <p id="p">Tap the keyboard</p>
     <canvas id="myCanvas" resize>
     </canvas>
     
