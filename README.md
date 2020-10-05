@@ -21,4 +21,4 @@ download the folder to your mashine. open index.html file on yor browser
 
 ## Running example
 
-<img style="-webkit-user-select: none;margin: auto;width: 700px;" src="https://raw.githubusercontent.com/EfratVanso/like-patatap/master/patatap.gif" width="870">
+<img style="-webkit-user-select: none;margin: auto;width: 700px;" src="https://raw.githubusercontent.com/EfratVanso/like-patatap.github.io/master/patatp.gif" width="870">
